@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Static from './Static';
 import fetcher from './fetcher';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <h1>vitest demo</h1>
+      <Static />
       <pre>{JSON.stringify(user, null, 2)}</pre>
     </>
   );

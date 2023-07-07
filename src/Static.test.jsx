@@ -5,6 +5,6 @@ import { render, screen } from './test/testUtils';
 describe('Static', () => {
   it('show static', () => {
     render(<Static />)
-    expect(screen.getByText('Static')).toBeInTheDocument()
+    expect(screen.getByText('Static')).toBeDefined()
   })
 })

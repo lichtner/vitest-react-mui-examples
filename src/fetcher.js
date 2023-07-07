@@ -1,3 +1,5 @@
+import fetch from 'cross-fetch';
+
 const DEFAULT_OPTIONS = {
   credentials: 'include', // this has to be set to fetch request with credentials such as cookies like access_token
   headers: {

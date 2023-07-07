@@ -3,17 +3,32 @@ import fetcher from './fetcher';
 
 export default function User() {
   const [user, setUser] = useState();
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
+    setIsLoading(true)
     const load = async () => {
-      const data = await fetcher('/users/1');
-      setUser(data);
-      console.log(data);
-    };
-    load();
+      setTimeout(async () => {
+        try {
+          const data = await fetcher('/users/1')
+          setUser(data)
+        } catch (e) {
+          console.log(e)
+        }
+      }, 0)
+    }
+    load()
   }, []);
+  
+  useEffect(() => {
+    if (!user) return 
+    setIsLoading(false)
+  }, [user])
 
   return (
-    <pre>{JSON.stringify(user, null, 2)}</pre>
+    <>
+      {isLoading && <div>loading...</div>}
+      {user && !isLoading && <pre>{user.name}</pre>}
+    </>
   );
 }

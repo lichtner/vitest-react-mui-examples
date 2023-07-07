@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import UserId from './UserId';
+import { user2 } from './mocks/handlers';
 import { render, screen, userEvent } from './test/testUtils';
 
 describe('User Id', () => {
@@ -11,6 +12,6 @@ describe('User Id', () => {
     expect(input).toHaveProperty('value', '2')
     const button = screen.getByRole('button')
     await userEvent.click(button)
-    expect(screen.getByText('mockuser2')).toBeDefined()
+    expect(screen.getByText(user2.name)).toBeDefined()
   })
 })

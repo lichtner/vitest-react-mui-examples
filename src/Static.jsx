@@ -1,3 +1,3 @@
 export default function Static() {
-  return <h4>Static</h4>
+  return <pre>static</pre>
 }

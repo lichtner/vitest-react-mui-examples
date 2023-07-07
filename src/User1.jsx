@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import fetcher from './fetcher';
 
-export default function User() {
+export default function User1() {
   const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(false)
 

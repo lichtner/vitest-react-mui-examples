@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import User from './User';
+import User2 from './User2';
 import { render, screen, waitForElementToBeRemoved } from './test/testUtils';
 
-describe('User', () => {
-  it('show user', async () => {
-    render(<User />)
+describe('User 2', () => {
+  it('show user 2', async () => {
+    render(<User2 />)
     await waitForElementToBeRemoved(() => screen.queryByText('loading...'))
-    expect(screen.getByText('mockuser')).toBeDefined()
+    expect(screen.getByText('mockuser2')).toBeDefined()
   })
 })

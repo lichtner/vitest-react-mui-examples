@@ -1,6 +1,6 @@
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
-import UserIdGet from './UserIdGet';
+import MuiUserIdGet from './MuiUserIdGet';
 
 export default function MuiUser() {
   const [id, setId] = useState()
@@ -23,7 +23,7 @@ export default function MuiUser() {
         />
         <Button variant='contained' onClick={() => getUser()}>get user</Button>
       </Box>
-      {userId && <UserIdGet userId={userId} />}
+      {userId && <MuiUserIdGet userId={userId} />}
     </>
   );
 }
